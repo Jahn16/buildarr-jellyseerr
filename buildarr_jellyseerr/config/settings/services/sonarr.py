@@ -548,7 +548,7 @@ class SonarrSettings(JellyseerrConfigBase):
             }
             language_profile_ids: Dict[str, int] = {
                 api_profile["name"]: api_profile["id"]
-                for api_profile in api_metadata["languageProfiles"]
+                for api_profile in api_metadata["languageProfiles"] or []
             }
             tag_ids: Dict[str, int] = {
                 api_profile["label"]: api_profile["id"] for api_profile in api_metadata["tags"]
@@ -634,7 +634,7 @@ class SonarrSettings(JellyseerrConfigBase):
             }
             language_profile_ids: Dict[str, int] = {
                 api_profile["name"]: api_profile["id"]
-                for api_profile in api_metadata["languageProfiles"]
+                for api_profile in api_metadata["languageProfiles"] or []
             }
             tag_ids: Dict[str, int] = {
                 api_profile["label"]: api_profile["id"] for api_profile in api_metadata["tags"]
