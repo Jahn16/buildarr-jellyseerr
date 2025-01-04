@@ -148,7 +148,7 @@ class JellyseerrGeneralSettings(JellyseerrConfigBase):
                 "encoder": lambda v: "|".join(sorted(v)) if v else "",
             },
         ),
-        ("discover_region", "region", {}),
+        ("discover_region", "discoverRegion", {}),
         ("hide_available_media", "hideAvailable", {}),
         ("allow_partial_series_requests", "partialRequestsEnabled", {}),
     ]
