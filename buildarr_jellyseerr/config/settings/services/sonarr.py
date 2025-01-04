@@ -314,7 +314,7 @@ class Sonarr(ArrBase):
                 )
             else:
                 return resource_ref
-        if not required or resource_ref in resource_ids:
+        if not required or resource_ref in resource_ids or resource_ref == "Deprecated":
             return resource_ref
         raise ValueError(
             f"Invalid {resource_description} name '{resource_ref}' "
