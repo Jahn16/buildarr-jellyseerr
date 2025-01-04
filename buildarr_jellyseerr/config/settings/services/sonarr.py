@@ -152,7 +152,7 @@ class Sonarr(ArrBase):
                 {
                     # No decoder here: The language profile ID will get resolved
                     # later *if* a Buildarr instance-to-instance link is used.
-                    "encoder": lambda v: language_profile_ids[v],
+                    "encoder": lambda v: language_profile_ids.get(v, 0),
                 },
             ),
             ("tags", "tags", {"encoder": lambda v: sorted(tag_ids[tag] for tag in v)}),
@@ -191,7 +191,7 @@ class Sonarr(ArrBase):
                     # later *if* a Buildarr instance-to-instance link is used.
                     "optional": True,
                     "set_if": bool,
-                    "encoder": lambda v: language_profile_ids[v],
+                    "encoder": lambda v: language_profile_ids.get(v, 0),
                 },
             ),
             ("anime_tags", "animeTags", {"encoder": lambda v: sorted(tag_ids[tag] for tag in v)}),
