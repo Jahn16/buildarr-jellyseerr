@@ -36,7 +36,6 @@ class JellyseerrNotificationsSettings(JellyseerrConfigBase):
     discord: DiscordSettings = DiscordSettings()
     email: EmailSettings = EmailSettings()
     gotify: GotifySettings = GotifySettings()
-    lunasea: LunaseaSettings = LunaseaSettings()
     pushbullet: PushbulletSettings = PushbulletSettings()
     pushover: PushoverSettings = PushoverSettings()
     slack: SlackSettings = SlackSettings()

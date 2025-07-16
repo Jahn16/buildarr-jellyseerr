@@ -73,7 +73,6 @@ class JellyseerrGeneralSettings(JellyseerrConfigBase):
     When this attribute is changed, a restart of Jellyseerr is required.
     """
 
-    enable_csrf_protection: bool = False
     """
     Set external API access to read-only (requires HTTPS).
 
@@ -132,8 +131,6 @@ class JellyseerrGeneralSettings(JellyseerrConfigBase):
             "applicationUrl",
             {"decoder": lambda v: v or None, "encoder": lambda v: v or ""},
         ),
-        ("enable_proxy_support", "trustProxy", {}),
-        ("enable_csrf_protection", "csrfProtection", {}),
         ("enable_image_caching", "cacheImages", {}),
         (
             "display_language",
